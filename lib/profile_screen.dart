@@ -30,46 +30,58 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'Username',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        height: 2,
-                        color: Colors.black26,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        'Username',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          height: 2,
+                          color: Colors.black26,
+                        ),
                       ),
                     ),
                     Text('Your username goes here'),
                     Divider(),
-                    Text(
-                      'Email',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        height: 2,
-                        color: Colors.black26,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        'Email',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          height: 2,
+                          color: Colors.black26,
+                        ),
                       ),
                     ),
                     Text('Your email goes here'),
                     Divider(),
-                    Text(
-                      'Phone',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        height: 2,
-                        color: Colors.black26,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        'Phone',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          height: 2,
+                          color: Colors.black26,
+                        ),
                       ),
                     ),
                     Text('Your phone number goes here'),
                     Divider(),
-                    Text(
-                      'Gender',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        height: 2,
-                        color: Colors.black26,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        'Gender',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          height: 2,
+                          color: Colors.black26,
+                        ),
                       ),
                     ),
                     Text('Your gender goes here'),
