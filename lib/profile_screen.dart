@@ -16,6 +16,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         centerTitle: true,
         backgroundColor: Colors.purple.shade900,
         title: Text('Profile'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.edit),
+          ),
+        ],
       ),
       body: SafeArea(
         child: ListView(
