@@ -67,7 +67,10 @@ class _FormScreenState extends State<FormScreen> {
                 padding: const EdgeInsets.only(top: 20.0, bottom: 40),
                 child: Text(
                   'Please enter your credentials to proceed',
-                  style: TextStyle(color: Colors.black45),
+                  style: TextStyle(
+                    color: Colors.black45,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
               TextWidget(
@@ -137,25 +140,24 @@ class _FormScreenState extends State<FormScreen> {
     );
   }
 
-  void _initiateSubmissionSequence(
+  dynamic _initiateSubmissionSequence(
     context,
     String username,
     String email,
     String phone,
     String zipCode,
   ) async {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) => AlertDialog(
-        content: Center(
-          child: CircularProgressIndicator(),
-        ),
-      ),
-    );
+    // return showDialog(
+    //   context: context,
+    //   builder: (BuildContext context) => AlertDialog(
+    //     content: Center(
+    //       child: CircularProgressIndicator(),
+    //     ),
+    //   ),
+    // );
 
     await _saveToPrefs(username, email, phone, zipCode);
 
-    Navigator.pop(context);
     Navigator.push(
       context,
       MaterialPageRoute(
