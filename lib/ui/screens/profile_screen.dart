@@ -19,7 +19,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
         title: Text('Profile'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => ProfileScreen(),
+                ),
+              );
+            },
             icon: Icon(Icons.edit),
           ),
         ],

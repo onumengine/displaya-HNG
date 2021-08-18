@@ -158,8 +158,7 @@ class _FormScreenState extends State<FormScreen> {
 
     await _saveToPrefs(username, email, phone, zipCode);
 
-    Navigator.push(
-      context,
+    Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => ProfileScreen(),
       ),
