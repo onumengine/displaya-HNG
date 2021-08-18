@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:displaya/profile_screen.dart';
+import 'package:displaya/ui/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
