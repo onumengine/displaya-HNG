@@ -11,7 +11,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    var timer = Timer(Duration(milliseconds: 500), () {
+    var timer = Timer(Duration(milliseconds: 1500), () {
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => FormScreen(),
