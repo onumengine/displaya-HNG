@@ -42,7 +42,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     ),
-                    Text('Your username goes here'),
+                    Text(
+                      'Your username goes here',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     Divider(),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8),
@@ -56,7 +62,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     ),
-                    Text('Your email goes here'),
+                    Text(
+                      'Your email goes here',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     Divider(),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8),
@@ -70,7 +82,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     ),
-                    Text('Your phone number goes here'),
+                    Text(
+                      'Your phone number goes here',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     Divider(),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8),
@@ -84,7 +102,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     ),
-                    Text('Your gender goes here'),
+                    Text(
+                      'Your gender goes here',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ],
                 ),
               ),
