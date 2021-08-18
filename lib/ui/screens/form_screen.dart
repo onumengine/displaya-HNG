@@ -10,19 +10,13 @@ class FormScreen extends StatefulWidget {
 
 class _FormScreenState extends State<FormScreen> {
   final _usernameFieldKey = GlobalKey<FormState>();
-
   final _emailFieldKey = GlobalKey<FormState>();
-
   final _phoneFieldKey = GlobalKey();
-
   final _zipCodeKey = GlobalKey<FormState>();
 
   final _usernameController = TextEditingController();
-
   final _emailController = TextEditingController();
-
   final _phoneController = TextEditingController();
-
   final _zipCodeController = TextEditingController();
 
   @override
