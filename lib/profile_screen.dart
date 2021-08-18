@@ -22,7 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(40),
               ),
               child: Padding(
                 padding:
@@ -30,16 +30,48 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('Username'),
+                    Text(
+                      'Username',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        height: 2,
+                        color: Colors.black26,
+                      ),
+                    ),
                     Text('Your username goes here'),
                     Divider(),
-                    Text('Email'),
+                    Text(
+                      'Email',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        height: 2,
+                        color: Colors.black26,
+                      ),
+                    ),
                     Text('Your email goes here'),
                     Divider(),
-                    Text('Phone'),
+                    Text(
+                      'Phone',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        height: 2,
+                        color: Colors.black26,
+                      ),
+                    ),
                     Text('Your phone number goes here'),
                     Divider(),
-                    Text('Gender'),
+                    Text(
+                      'Gender',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        height: 2,
+                        color: Colors.black26,
+                      ),
+                    ),
                     Text('Your gender goes here'),
                   ],
                 ),
