@@ -1,5 +1,7 @@
 import 'package:displaya/ui/components/text_widget.dart';
+import 'package:displaya/ui/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FormScreen extends StatefulWidget {
   @override
@@ -22,6 +24,11 @@ class _FormScreenState extends State<FormScreen> {
   final _phoneController = TextEditingController();
 
   final _zipCodeController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +57,7 @@ class _FormScreenState extends State<FormScreen> {
                     'come',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue,
+                      color: Colors.deepPurpleAccent,
                       fontSize: 30.0,
                     ),
                   ),
@@ -99,15 +106,23 @@ class _FormScreenState extends State<FormScreen> {
                 height: 50.0,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.deepPurpleAccent,
                   borderRadius: BorderRadius.all(
                     Radius.circular(16.0),
                   ),
                 ),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _initiateSubmissionSequence(
+                      context,
+                      _usernameController.text,
+                      _emailController.text,
+                      _phoneController.text,
+                      _zipCodeController.text,
+                    );
+                  },
                   child: Text(
-                    'SIGN IN',
+                    'SUBMIT',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -120,5 +135,45 @@ class _FormScreenState extends State<FormScreen> {
         ),
       ),
     );
+  }
+
+  void _initiateSubmissionSequence(
+    context,
+    String username,
+    String email,
+    String phone,
+    String zipCode,
+  ) async {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        content: Center(
+          child: CircularProgressIndicator(),
+        ),
+      ),
+    );
+
+    await _saveToPrefs(username, email, phone, zipCode);
+
+    Navigator.pop(context);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ProfileScreen(),
+      ),
+    );
+  }
+
+  Future<void> _saveToPrefs(
+    String username,
+    String email,
+    String phone,
+    String zipCode,
+  ) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.setString('username', username);
+    preferences.setString('email', email);
+    preferences.setString('phone', phone);
+    preferences.setString('zipCode', zipCode);
   }
 }
