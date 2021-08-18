@@ -18,7 +18,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: SafeArea(
         child: ListView(
           children: [
-            CircleAvatar(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30),
+              child: CircleAvatar(
+                backgroundColor: Colors.white,
+                radius: 65,
+                child: Image.asset('lib/assets/avatar.png'),
+              ),
+            ),
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
