@@ -20,11 +20,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             CircleAvatar(),
             Container(
-                height: MediaQuery.of(context).size.height,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -40,7 +42,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Text('Gender'),
                     Text('Your gender goes here'),
                   ],
-                )),
+                ),
+              ),
+            ),
           ],
         ),
       ),
