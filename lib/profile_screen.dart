@@ -6,6 +6,8 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.purple.shade900,
       appBar: AppBar(
@@ -18,7 +20,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: SafeArea(
         child: ListView(
           children: [
-            Padding(
+            Container(
               padding: const EdgeInsets.symmetric(vertical: 30),
               child: CircleAvatar(
                 backgroundColor: Colors.white,
@@ -27,9 +29,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             Container(
+              height: screenSize.height * 2 / 3,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(40),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                ),
               ),
               child: Padding(
                 padding:
