@@ -1,12 +1,6 @@
 import 'package:displaya/ui/components/text_widget.dart';
 import 'package:flutter/material.dart';
 
-enum Gender {
-  Male,
-  Memale,
-  NonBinary,
-}
-
 class FormScreen extends StatefulWidget {
   @override
   _FormScreenState createState() => _FormScreenState();
@@ -29,14 +23,6 @@ class _FormScreenState extends State<FormScreen> {
 
   final _zipCodeController = TextEditingController();
 
-  final List<String> _genders = [
-    'Male',
-    'Female',
-    'Non-binary',
-  ];
-
-  String selectedGender = 'Male';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +39,7 @@ class _FormScreenState extends State<FormScreen> {
               Row(
                 children: <Text>[
                   Text(
-                    'Sign',
+                    'Wel',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -61,7 +47,7 @@ class _FormScreenState extends State<FormScreen> {
                     ),
                   ),
                   Text(
-                    'In',
+                    'come',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.blue,
@@ -71,7 +57,7 @@ class _FormScreenState extends State<FormScreen> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                padding: const EdgeInsets.only(top: 20.0, bottom: 40),
                 child: Text(
                   'Please enter your credentials to proceed',
                   style: TextStyle(color: Colors.black45),
@@ -83,7 +69,7 @@ class _FormScreenState extends State<FormScreen> {
                 controller: _usernameController,
               ),
               SizedBox(
-                height: 20.0,
+                height: 40.0,
               ),
               TextWidget(
                 hintText: 'Email',
@@ -91,7 +77,7 @@ class _FormScreenState extends State<FormScreen> {
                 controller: _emailController,
               ),
               SizedBox(
-                height: 20.0,
+                height: 40.0,
               ),
               TextWidget(
                 hintText: 'Phone',
@@ -99,7 +85,7 @@ class _FormScreenState extends State<FormScreen> {
                 controller: _phoneController,
               ),
               SizedBox(
-                height: 20.0,
+                height: 40.0,
               ),
               TextWidget(
                 hintText: 'Zip code',
@@ -107,7 +93,7 @@ class _FormScreenState extends State<FormScreen> {
                 controller: _zipCodeController,
               ),
               SizedBox(
-                height: 44,
+                height: 80,
               ),
               Container(
                 height: 50.0,

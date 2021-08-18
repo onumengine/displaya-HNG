@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:displaya/ui/screens/profile_screen.dart';
+import 'package:displaya/ui/screens/form_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     var timer = Timer(Duration(milliseconds: 500), () {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => ProfileScreen(),
+          builder: (context) => FormScreen(),
         ),
       );
     });
