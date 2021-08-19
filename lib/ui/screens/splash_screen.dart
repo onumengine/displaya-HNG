@@ -11,7 +11,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    var timer = Timer(Duration(milliseconds: 1500), () {
+    var timer = Timer(Duration(milliseconds: 3000), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => FormScreen(),
@@ -25,11 +25,32 @@ class _SplashScreenState extends State<SplashScreen> {
       body: SafeArea(
         child: Center(
           child: Image.asset(
-            'lib/assets/doormat.png',
+            'lib/assets/hngicon.png',
             width: 150,
           ),
         ),
       ),
+    );
+  }
+}
+
+class _YourWidgetState extends State<SplashScreen> {
+  String? value;
+  TextEditingController controller = TextEditingController();
+
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Text(value!),
+        TextButton(
+          onPressed: () {
+            setState(() {
+              value = controller.text;
+            });
+          },
+          child: Text('PRESS ME'),
+        ),
+      ],
     );
   }
 }
